@@ -1,0 +1,7 @@
+﻿namespace WorldLibrary
+{
+    class MovementProcessor
+    {
+
+    }
+}
