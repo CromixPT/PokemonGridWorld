@@ -10,6 +10,10 @@
             PokemonsCaught = 1;
 
 
+
+
+
+
             return PokemonsCaught;
 
         }
