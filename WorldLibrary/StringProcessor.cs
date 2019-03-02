@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using System.Linq;
+﻿using System.Linq;
 
 namespace WorldLibrary
 {
@@ -16,21 +15,21 @@ namespace WorldLibrary
             return true;
         }
 
-        public static List<char> ProcessString(string input)
-        {
-            List<char> inputChars = new List<char>();
+        //public static List<char> ProcessString(string input)
+        //{
+        //    List<char> inputChars = new List<char>();
 
-            foreach(char letter in input)
-            {
-                if(StringProcessor.isCharacterValid(letter))
-                {
-                    inputChars.Add(letter);
-                }
+        //    foreach(char letter in input)
+        //    {
+        //        if(StringProcessor.isCharacterValid(letter))
+        //        {
+        //            inputChars.Add(letter);
+        //        }
 
-            }
+        //    }
 
-            return inputChars;
-        }
+        //    return inputChars;
+        //}
 
     }
 }

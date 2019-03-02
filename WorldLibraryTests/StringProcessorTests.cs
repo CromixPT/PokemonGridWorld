@@ -38,18 +38,18 @@ namespace WorldLibraryTests
 
 
 
-        #region ProcessString_Testing
-        [Theory]
-        [InlineData("NN", 2)]
-        [InlineData("NPN", 2)]
-        [InlineData("NESPO", 4)]
-        [InlineData("NSNSNSEODFRROO", 10)]
-        public void ProcessString_CharacterCount_ShouldPass(string input, int expectedValue)
-        {
-            var actual = StringProcessor.ProcessString(input).Count;
+        //#region ProcessString_Testing
+        //[Theory]
+        //[InlineData("NN", 2)]
+        //[InlineData("NPN", 2)]
+        //[InlineData("NESPO", 4)]
+        //[InlineData("NSNSNSEODFRROO", 10)]
+        //public void ProcessString_CharacterCount_ShouldPass(string input, int expectedValue)
+        //{
+        //    var actual = StringProcessor.ProcessString(input).Count;
 
-            Assert.Equal(expectedValue, actual);
-        }
-        #endregion
+        //    Assert.Equal(expectedValue, actual);
+        //}
+        //#endregion
     }
 }
