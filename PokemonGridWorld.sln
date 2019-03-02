@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleUI", "ConsoleUI\Cons
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorldLibrary", "WorldLibrary\WorldLibrary.csproj", "{3F38078B-75C8-4917-9AE4-32D6F89A9764}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorldLibraryTests", "WorldLibraryTests\WorldLibraryTests.csproj", "{DFED1DD2-57F6-46D3-B9D3-370DBD442EED}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{3F38078B-75C8-4917-9AE4-32D6F89A9764}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3F38078B-75C8-4917-9AE4-32D6F89A9764}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3F38078B-75C8-4917-9AE4-32D6F89A9764}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DFED1DD2-57F6-46D3-B9D3-370DBD442EED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DFED1DD2-57F6-46D3-B9D3-370DBD442EED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DFED1DD2-57F6-46D3-B9D3-370DBD442EED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DFED1DD2-57F6-46D3-B9D3-370DBD442EED}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
