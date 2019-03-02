@@ -6,6 +6,7 @@ namespace WorldLibraryTests
 
     public class StringProcessorTests
     {
+        #region isCharacterValid_Testing
         [Theory]
         [InlineData('N')]
         [InlineData('S')]
@@ -17,6 +18,7 @@ namespace WorldLibraryTests
 
             Assert.True(actual);
         }
+
 
 
         [Theory]
@@ -32,6 +34,22 @@ namespace WorldLibraryTests
 
             Assert.False(actual);
         }
+        #endregion
 
+
+
+        #region ProcessString_Testing
+        [Theory]
+        [InlineData("NN", 2)]
+        [InlineData("NPN", 2)]
+        [InlineData("NESPO", 4)]
+        [InlineData("NSNSNSEODFRROO", 10)]
+        public void ProcessString_CharacterCount_ShouldPass(string input, int expectedValue)
+        {
+            var actual = StringProcessor.ProcessString(input).Count;
+
+            Assert.Equal(expectedValue, actual);
+        }
+        #endregion
     }
 }

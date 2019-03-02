@@ -16,7 +16,7 @@ namespace WorldLibrary
             return true;
         }
 
-        public static IList<char> ProcessString(string input)
+        public static List<char> ProcessString(string input)
         {
             List<char> inputChars = new List<char>();
 
