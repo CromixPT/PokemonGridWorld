@@ -1,13 +1,30 @@
-﻿using System;
-using WorldLibrary.Models;
+﻿using WorldLibrary.Models;
 
 namespace WorldLibrary
 {
     public class MovementProcessor
     {
-        internal static PositionModel Movement(PositionModel currentPosition, char letter)
+        internal static PositionModel Move(PositionModel currentPosition, char letter)
         {
-            throw new NotImplementedException();
+            var newPostion = currentPosition;
+            switch(letter)
+            {
+                case 'N':
+                    newPostion.xValue++;
+                    break;
+                case 'S':
+                    newPostion.xValue--;
+                    break;
+                case 'E':
+                    newPostion.yValue++;
+                    break;
+                case 'O':
+                    newPostion.yValue--;
+                    break;
+                default:
+                    break;
+            }
+            return newPostion;
         }
     }
 }

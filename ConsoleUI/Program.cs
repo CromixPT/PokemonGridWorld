@@ -10,12 +10,12 @@ namespace ConsoleUI
 
 
             Console.WriteLine("Welcome to Pokemon Grid World");
-            Console.WriteLine("Ash will move with your instructions, provide me with a set of cardinal instructions(N,S,E,O) and we see how many pokemon Ash picks!");
+            Console.WriteLine("Provide me with a set of cardinal instructions(N,S,E,O) and we see how many pokemon Ash picks!");
 
-            string input = Console.ReadLine().ToUpper();
+            string input = Console.ReadLine();
 
 
-            int PokemonsCaught = GameWorld.ProcessPlay(input);
+            int PokemonsCaught = GameWorld.Play(input);
 
 
             Console.WriteLine($"Ash caught {PokemonsCaught} pokemons");
