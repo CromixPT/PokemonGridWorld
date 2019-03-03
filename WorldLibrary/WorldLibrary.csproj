@@ -43,7 +43,6 @@
   <ItemGroup>
     <Compile Include="GameWorld.cs" />
     <Compile Include="Models\PositionModel.cs" />
-    <Compile Include="MovementProcessor.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
