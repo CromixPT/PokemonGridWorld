@@ -45,7 +45,6 @@
     <Compile Include="Models\PositionModel.cs" />
     <Compile Include="MovementProcessor.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="StringProcessor.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
