@@ -17,10 +17,12 @@ namespace WorldLibraryTests
         [InlineData("eenpnoosenneenooss", 15)]
         [InlineData("eennooosseeennooosseeennooosseeennooosseeennooosseeennooosseeennooosseeennooosse", 10)]
         [InlineData("eennooosseeennooosseeennooosseeennooosseeennooosseeennooosseeennooosseeennooossen", 11)]
+        [InlineData("nnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnneeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSEEEEEEEEEEEEEEEEEEEEEEENNNNNNNNNNNNNNNNNNNNNN", 288)]
         public void Play_PokemonsCount_ShouldPass(string input, int expected)
         {
 
-            var actual = GameWorld.Play(input);
+            GameWorld TestGame = new GameWorld();
+            var actual = TestGame.Play(input);
 
             Assert.Equal(expected, actual);
         }

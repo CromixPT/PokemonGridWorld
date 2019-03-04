@@ -6,9 +6,9 @@ namespace WorldLibrary
 {
     public class GameWorld
     {
-        public static int PokemonsCaught { get; set; }
+        public int PokemonsCaught { get; set; }
 
-        public static int Play(string input)
+        public int Play(string input)
         {
             PositionModel currentPosition = new PositionModel();
             var dicPositionsVisited = new Dictionary<string, bool>();
@@ -17,28 +17,32 @@ namespace WorldLibrary
             PokemonsCaught = 1;
             dicPositionsVisited[$"{currentPosition.xValue},{currentPosition.yValue}"] = true;
 
+            //make sure we only dealing with uppercase
             input = input.ToUpper();
 
             foreach(char letter in input)
             {
                 if(IsCharacterValid(letter))
                 {
-                    currentPosition = Move(currentPosition, letter);
+                    Move(currentPosition, letter);
+
+                    //if first time in this position add it to dictionary and catch the pokemon
+                    if(!dicPositionsVisited.ContainsKey($"{currentPosition.xValue},{currentPosition.yValue}"))
+                    {
+                        dicPositionsVisited[$"{currentPosition.xValue},{currentPosition.yValue}"] = true;
+                        PokemonsCaught++;
+                    }
                 }
 
-                if(!dicPositionsVisited.ContainsKey($"{currentPosition.xValue},{currentPosition.yValue}"))
-                {
-                    dicPositionsVisited[$"{currentPosition.xValue},{currentPosition.yValue}"] = true;
-                    PokemonsCaught++;
-                }
             }
-
             return PokemonsCaught;
 
         }
 
-        private static bool IsCharacterValid(char inputChar)
+        //validates if input character is valid
+        private bool IsCharacterValid(char inputChar)
         {
+
             char[] validChars = { 'N', 'S', 'E', 'O' };
             if(!validChars.Contains(inputChar))
             {
@@ -47,7 +51,9 @@ namespace WorldLibrary
             return true;
         }
 
-        private static PositionModel Move(PositionModel currentPosition, char letter)
+
+        //movement is based on a XX's YY's axis
+        private PositionModel Move(PositionModel currentPosition, char letter)
         {
             var newPostion = currentPosition;
             switch(letter)
